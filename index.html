@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .btn {
+            background-color:black;
+            color:white;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+        }
+        .change{
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Color changer app</h1>
+    <div class="change">Nabia</div>
+    <button class="btn">pick color</button>
+    <script>
+        let body = document.querySelector(".change");
+        let btn = document.querySelector(".btn")
+       
+        btn.addEventListener("click", ()=>{
+             let red = Math.floor(Math.random() * 256);
+        console.log(red);
+        let green = Math.floor(Math.random() * 256);
+        console.log(green);
+        let blue = Math.floor(Math.random() * 256);
+        console.log(blue);
+            console.log("hi");
+            body.style.backgroundColor = `rgb(${red}, ${green},${blue})`;
+        });
+
+
+    </script>
+</body>
+
+</html>
